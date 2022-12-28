@@ -1,0 +1,226 @@
+{
+  "NAI": {
+    "bsctest": {
+      "address": "0xE164c3Cd64e477094b77AcA4f73B2175FF47572e",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NWL": {
+    "bsctest": {
+      "address": "0xa9D48D0b6F8e814418F6DD426E19Ea784893Dcf9",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "USDT": {
+    "bsctest": {
+      "address": "0x693Ba3877550d2d63098C180e7b757964438d4F2",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "Comptroller": {
+    "bsctest": {
+      "address": "0xD783075759d72908e064583b08bC8e2A09a53082",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "Unitroller": {
+    "bsctest": {
+      "address": "0x7eFf90f61B4Ba2AB5078fF6E5146C67c33b8b82A",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "JumpRateModel": {
+    "bsctest": {
+      "address": "0x1ff5Fb689a5aEA69338545b133494a222033f915",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "NBep20Delegate": {
+    "bsctest": {
+      "address": "0x7477137D7B023ba11646D5F4f431102d96f737a2",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "nBNB": {
+    "bsctest": {
+      "address": "0xD6694aCDdeE7bec26Bd3cD40Ae396dB594540062",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "SimplePriceOracle": {
+    "bsctest": {
+      "address": "0x0Ef66803e6466DcD73F69CDD6e940Fd0C7799AE9",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NarwhalLens": {
+    "bsctest": {
+      "address": "0x411733B03849C2e7C31Ef267607FF6fB83c6d2D8",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "ComptrollerLens": {
+    "bsctest": {
+      "address": "0xEE6448DCdeA951854b4E4255c514AD8433364e38",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "NAIController": {
+    "bsctest": {
+      "address": "0x080C9649cE7055cB5cD8754AfC49F2bABFA0E81c",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "NAIUnitroller": {
+    "bsctest": {
+      "address": "0x21c7f8958677140E721c969128D2dc4E2b580FcC",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  },
+  "NarwhalChainlinkOracle": {
+    "bsctest": {
+      "address": "0x1Bf8c543468Cb1cC8DC895448485541472b0Bd79",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "FIL": {
+    "bsctest": {
+      "address": "0x9C69e0F1d37e1DFF28F64eDC0e8eAd67ad6C4507",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "FILJumpRateModel": {
+    "bsctest": {
+      "address": "0x850D4D2d61F81eec6697E6f3AEa324fCa84eC039",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "nFIL": {
+    "bsctest": {
+      "address": "0x06fCF8bb3d5c13deb01bb6C011025e9620E8D8b3",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "Faucet": {
+    "bsctest": {
+      "address": "0xC94125EeC2b2f77E731E57A9283ac0a8c6db252E",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NAIVault": {
+    "bsctest": {
+      "address": "0x9191d16B70994d4f218696E38D011f20E921E633",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NAIVaultProxy": {
+    "bsctest": {
+      "address": "0x3acb2BE297B6bd140F89ac2a53d8F32650371F2e",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NWLVault": {
+    "bsctest": {
+      "address": "0xEc9f26F892eb311E7C4b2C03Ed846CDECb6dc6AF",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NWLVaultProxy": {
+    "bsctest": {
+      "address": "0x506C33C603dd7b3E97cC01673ebB7D5F57926fc5",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NWLStore": {
+    "bsctest": {
+      "address": "0xa38DA6377e692DFCDd87A2C26FD19d250e0267c9",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "BNBJumpRateModel": {
+    "bsctest": {
+      "address": "0x25918a857CD79b98A16eCc8Bb827d8880B9700D7",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "WBTCJumpRateModel": {
+    "bsctest": {
+      "address": "0x4f0a1EB6dA6817826B9d25C71B8d1B283fA8e44B",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "WBTC": {
+    "bsctest": {
+      "address": "0xa7E48177021787Bf8F5C7B421Cd8Bcdcd2c31Cd2",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "nWBTC": {
+    "bsctest": {
+      "address": "0xd8FDB259D0520Ebf8DB92a3Ce58209D570BA8375",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "WETHJumpRateModel": {
+    "bsctest": {
+      "address": "0x87355C55B707bb334AE47a2C0ab38047201a98cc",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "WETH": {
+    "bsctest": {
+      "address": "0x318C9a66291A884952Ec6Caf8905DfC2b25f8EF6",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "nWETH": {
+    "bsctest": {
+      "address": "0x461160BF68707d712255f8A36d0b155c1B7d0887",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "NAIJumpRateModel": {
+    "bsctest": {
+      "address": "0x2136799d17eEEE3d0FE9b8dFd74D2d9b0f1fa929",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "nNAI": {
+    "bsctest": {
+      "address": "0x2bAc9b19164599994E67B59CB380674791BE4A05",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  }
+}
