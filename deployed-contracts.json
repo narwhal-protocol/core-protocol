@@ -23,7 +23,7 @@
   },
   "Comptroller": {
     "bsctest": {
-      "address": "0xD783075759d72908e064583b08bC8e2A09a53082",
+      "address": "0x67E5e000f9683F41B5A2bF88D6d900426d5658F4",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
@@ -33,7 +33,7 @@
   },
   "Unitroller": {
     "bsctest": {
-      "address": "0x7eFf90f61B4Ba2AB5078fF6E5146C67c33b8b82A",
+      "address": "0x5B323ba1102001f9705A57D712D4e66Fd4A429f2",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
@@ -59,7 +59,7 @@
   },
   "nBNB": {
     "bsctest": {
-      "address": "0xD6694aCDdeE7bec26Bd3cD40Ae396dB594540062",
+      "address": "0x79212CfC5383429b9312716006a2F9B363242514",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -71,47 +71,47 @@
   },
   "NarwhalLens": {
     "bsctest": {
-      "address": "0x411733B03849C2e7C31Ef267607FF6fB83c6d2D8",
+      "address": "0xcF30874B22B4f70e56fac487c02B5c3032338eCA",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
-      "address": "0x0165878A594ca255338adfa4d48449f69242Eb8F",
+      "address": "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
     }
   },
   "ComptrollerLens": {
     "bsctest": {
-      "address": "0xEE6448DCdeA951854b4E4255c514AD8433364e38",
+      "address": "0xB73290ac767285dE67d1C16922A85f9BadDAA1Cf",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
-      "address": "0xa513E6E4b8f2a923D98304ec87F64353C4D5C853",
+      "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
     }
   },
   "NAIController": {
     "bsctest": {
-      "address": "0x080C9649cE7055cB5cD8754AfC49F2bABFA0E81c",
+      "address": "0x20Ee40a0214C0F78ACca4dE0d3A4d4238ffA230a",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
-      "address": "0x8A791620dd6260079BF849Dc5567aDC3F2FdC318",
+      "address": "0x68B1D87F95878fE05B998F19b66F4baba5De1aed",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
     }
   },
   "NAIUnitroller": {
     "bsctest": {
-      "address": "0x21c7f8958677140E721c969128D2dc4E2b580FcC",
+      "address": "0xd19228986AB23606FF32160b1834B9A4cC26b8A9",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     },
     "hardhat": {
-      "address": "0x610178dA211FEF7D417bC0e6FeD39F05609AD788",
+      "address": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
     }
   },
   "NarwhalChainlinkOracle": {
     "bsctest": {
-      "address": "0x1Bf8c543468Cb1cC8DC895448485541472b0Bd79",
+      "address": "0x887AF4A0a1C3D985e5BF699486Cf71A1E31f26c3",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -123,13 +123,13 @@
   },
   "FILJumpRateModel": {
     "bsctest": {
-      "address": "0x850D4D2d61F81eec6697E6f3AEa324fCa84eC039",
+      "address": "0x742D5a43a3CC47ADCcb9879E18D12F00191DE2B0",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nFIL": {
     "bsctest": {
-      "address": "0x06fCF8bb3d5c13deb01bb6C011025e9620E8D8b3",
+      "address": "0x9C535E71979ceDDFA7974adCe93e3574F80F9635",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -171,13 +171,13 @@
   },
   "BNBJumpRateModel": {
     "bsctest": {
-      "address": "0x25918a857CD79b98A16eCc8Bb827d8880B9700D7",
+      "address": "0xc019d424513203E7A1440869DD853808B3680930",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "WBTCJumpRateModel": {
     "bsctest": {
-      "address": "0x4f0a1EB6dA6817826B9d25C71B8d1B283fA8e44B",
+      "address": "0x0909930338b1DFFd635308c57D81F9E3098859BF",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -189,13 +189,13 @@
   },
   "nWBTC": {
     "bsctest": {
-      "address": "0xd8FDB259D0520Ebf8DB92a3Ce58209D570BA8375",
+      "address": "0x2b629BBB7dD8a3eac8516D596cCc1C2379feA0d5",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "WETHJumpRateModel": {
     "bsctest": {
-      "address": "0x87355C55B707bb334AE47a2C0ab38047201a98cc",
+      "address": "0xFE1cE928EAEEB31E4efA4c44bDd4216dF0D4646E",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -207,19 +207,29 @@
   },
   "nWETH": {
     "bsctest": {
-      "address": "0x461160BF68707d712255f8A36d0b155c1B7d0887",
+      "address": "0x253165b1a90B326E5F5F9FeaB07909F3FEc8Bb6b",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NAIJumpRateModel": {
     "bsctest": {
-      "address": "0x2136799d17eEEE3d0FE9b8dFd74D2d9b0f1fa929",
+      "address": "0x21d1275B759C7f0FDe10a66DDafcC0221e2D8b86",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nNAI": {
     "bsctest": {
-      "address": "0x2bAc9b19164599994E67B59CB380674791BE4A05",
+      "address": "0x3e2BB2c0c304540207E721f21d2A6c63bF38E81D",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    }
+  },
+  "AccessControlManager": {
+    "hardhat": {
+      "address": "0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "bsctest": {
+      "address": "0x834C35BAdd3D42d9bfd3ddE7b48b62FC10f9d426",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   }

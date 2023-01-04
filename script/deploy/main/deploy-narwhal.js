@@ -32,9 +32,25 @@ async function main() {
     await (await unitroller._setPendingImplementation(comptroller.address)).wait();
     await (await comptroller._become(unitroller.address)).wait();
 
+    const AccessControlManager = await ethers.getContractFactory("AccessControlManager");
+    const accessControlManager = await AccessControlManager.deploy();
+    await accessControlManager.deployed();
+
+    console.log("\tAccessControlManager deployed to:", accessControlManager.address);
+    await writeAddr(accessControlManager.address, "AccessControlManager", network.name, account.address);
+
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setCollateralFactor(address,uint256)", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setLiquidationIncentive(uint256)", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_supportMarket(address)", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketBorrowCaps(address[],uint256[])", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketSupplyCaps(address[],uint256[])", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setProtocolPaused(bool)", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setActionsPaused(address[],uint256[],bool)", account.address)).wait();
+
     const proxyUnitroller = await ethers.getContractAt("Comptroller", unitroller.address, account)
 
     //comptroller set
+    await (await proxyUnitroller._setAccessControl(accessControlManager.address)).wait();
     await (await proxyUnitroller._setLiquidationIncentive(liquidationIncentive)).wait();
     await (await proxyUnitroller._setCloseFactor(closeFactor)).wait();
 

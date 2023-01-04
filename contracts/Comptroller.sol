@@ -147,10 +147,10 @@ contract Comptroller is ComptrollerV9Storage, ComptrollerInterfaceG2, Comptrolle
     }
 
     function ensureAllowed(string memory functionSig) private view {  // TODO: need to replace
-//        require(
-//            IAccessControlManager(accessControl).isAllowedToCall(msg.sender, functionSig),
-//            "access denied"
-//        );
+        require(
+            IAccessControlManager(accessControl).isAllowedToCall(msg.sender, functionSig),
+            "access denied"
+        );
     }
 
     /*** Assets You Are In ***/

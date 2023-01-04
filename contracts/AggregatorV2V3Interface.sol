@@ -1,4 +1,4 @@
-pragma solidity >=0.5.0;
+pragma solidity ^0.5.16;
 
 /**
  * @title The V2 & V3 Aggregator Interface

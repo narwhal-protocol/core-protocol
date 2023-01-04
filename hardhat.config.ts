@@ -60,11 +60,25 @@ const config: HardhatUserConfig = {
           },
         },
       },
+      {
+        version: "0.8.17",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 10000,
+          },
+          outputSelection: {
+            "*": {
+              "*": ["storageLayout"],
+            },
+          },
+        },
+      },
     ],
   },
   networks: {
     bsctest: {
-      url: process.env.BSC_TESTNET_NODE || "https://data-seed-prebsc-1-s1.binance.org:8545",
+      url: process.env.BSC_TESTNET_NODE || "http://16.162.236.254:8575",
       chainId: 97,
       accounts: DEPLOYER_PRIVATE_KEY ? [`0x${DEPLOYER_PRIVATE_KEY}`] : [],
       gasPrice: ethers.utils.parseUnits("10", "gwei").toNumber(),
