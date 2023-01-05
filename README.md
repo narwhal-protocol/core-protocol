@@ -6,7 +6,7 @@
 npm run bsctest:deployment
 ```
 ## Detailed steps
-### 一、Deploy stable token NAI and protocol token NWL
+### I、Deploy stable token NAI and protocol token NWL
 
 Deployment script:
 ```shell
@@ -15,7 +15,7 @@ npx hardhat run ./script/deploy/main/deploy-nwl.js --network bsctest
 ```
 Because the NAI and NWL addresses are hard coded in Comptroller and NAIController, they need to be replaced in the code after deployment
 
-### 二、Deploy Comptroller, NAIController, corresponding agents and related configurations
+### II、Deploy Comptroller, NAIController, corresponding agents and related configurations
 
 Deployment script：
 ```shell
@@ -43,7 +43,7 @@ const liquidationIncentive = 1.1e18.toString(); //Liquidation reward, this value
 const NAIMintRate = "5000"; //Proportion of NAI stable coins 50% 
 ```
 
-### 三、Deploy chainLinkOracle
+### III、Deploy chainLinkOracle
 
 Deployment script：
 ```shell
@@ -52,7 +52,7 @@ npx hardhat run ./script/deploy/main/deploy-chainLinkOracle.js --network bsctest
 
 The detailed configuration process can be seen in the script
 
-### 四、Deploy the corresponding token market and related configurations
+### IV、Deploy the corresponding token market and related configurations
 Deployment script：
 ```shell
 npx hardhat run ./script/deploy/main/add_Market.js --network bsctest
@@ -83,7 +83,7 @@ const jumpMultiplierPerYear = 0.2e18.toString();
 const kink = 0.8e18.toString();
 ```
 
-### 五、Deploy VAIVault
+### V、Deploy VAIVault
 
 Deployment script：
 ```shell
@@ -109,7 +109,7 @@ Main configuration parameters
     const narwhalNAIVaultRate_ = "10000000000000" //NAIVault's protocol token reward rate
 ```
 
-### 六、Deploy NWLVault
+### VI、Deploy NWLVault
 Deployment script：
 ```shell
 npx hardhat run script/deploy/main/deploy-NWLVault.js --network bsctest
