@@ -102,15 +102,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
 
     function() external payable {}
 
-    /**
-     * @notice Safely liquidate an unhealthy loan, confirming that at least `minProfitAmount` in ETH profit is seized.
-     * @param borrower The borrower's Ethereum address.
-     * @param repayAmount The ETH amount to repay to liquidate the unhealthy loan.
-     * @param nTokenBorrow
-     * @param nTokenCollateral
-     * @param minProfitAmount The minimum amount of profit required for execution (in terms of `exchangeProfitTo`). Reverts if this condition is not met.
-     * @param exchangeProfitTo If set to an address other than `cErc20Collateral`, exchange seized collateral to this ERC20 token contract address (or the zero address for ETH).
-     */
     function safeLiquidateToEthWithFlashLoan(
         address borrower,
         uint256 repayAmount,
@@ -150,15 +141,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         );
     }
 
-    /**
-     * @notice Safely liquidate an unhealthy loan, confirming that at least `minProfitAmount` in ETH profit is seized.
-     * @param borrower The borrower's Ethereum address.
-     * @param repayAmount The amount to repay to liquidate the unhealthy loan.
-     * @param nTokenBorrow The borrowed CErc20 contract to repay.
-     * @param nTokenCollateral The nToken collateral contract to be liquidated.
-     * @param minProfitAmount The minimum amount of profit required for execution (in terms of `exchangeProfitTo`). Reverts if this condition is not met.
-     * @param exchangeProfitTo If set to an address other than `nTokenCollateral`, exchange seized collateral to this ERC20 token contract address (or the zero address for ETH).
-     */
     function safeLiquidateToTokensWithFlashLoan(
         address borrower,
         uint256 repayAmount,
@@ -266,9 +248,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         }
     }
 
-    /**
-     * @dev Liquidate unhealthy ETH borrow, exchange seized collateral, return flashloaned funds, and exchange profit.
-     */
     function postFlashLoanWeth(
         address borrower,
         uint256 repayAmount,
@@ -298,15 +277,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         emit LiquidateInfo(address(nTokenBorrow),repayAmount,address(nTokenCollateral));
     }
 
-    /**
-     * @dev Liquidate unhealthy token borrow, exchange seized collateral, return flash-loaned funds, and exchange profit.
-     * @param borrower
-     * @param repayAmount
-     * @param nTokenBorrow
-     * @param nTokenCollateral
-     * @param flashLoanReturnAmount
-     * @param exchangeProfitTo
-     */
     function postFlashLoanTokens(
         address borrower,
         uint256 repayAmount,
@@ -348,15 +318,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         emit LiquidateInfo(address(underlyingBorrow),repayAmount,address(nTokenCollateral));
     }
 
-    /**
-    * @dev Liquidate unhealthy token borrow, exchange seized collateral, return flash-loaned funds, and exchange profit.
-     * @param borrower
-     * @param repayAmount
-     * @param naiController
-     * @param nTokenCollateral
-     * @param flashLoanReturnAmount
-     * @param exchangeProfitTo
-     */
     function postFlashLoanNai(
         address borrower,
         uint256 repayAmount,
@@ -395,10 +356,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         emit LiquidateInfo(address(underlyingBorrow),repayAmount,address(nTokenCollateral));
     }
 
-
-    /**
-     * @dev Repays WETH flashloans.
-     */
     function repayWethFlashLoan(
         uint256 repayAmount,
         INToken nTokenCollateral,
@@ -572,9 +529,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         }
     }
 
-    /**
-     * @dev Returns an array containing the parameters supplied.
-     */
     function array(address a, address b) private pure returns (address[] memory) {
         address[] memory arr = new address[](2);
         arr[0] = a;
@@ -582,9 +536,6 @@ contract FlashLiquidateAndSwap is IPancakeCallee, Ownable {
         return arr;
     }
 
-    /**
-     * @dev Returns an array containing the parameters supplied.
-     */
     function array(
         address a,
         address b,
