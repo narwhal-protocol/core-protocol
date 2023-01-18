@@ -15,11 +15,13 @@ async function main() {
 
     //deploy Comptroller and Unitroller
     const Comptroller = await ethers.getContractFactory("Comptroller");
-    const comptroller = await Comptroller.deploy();
+    const comptroller = await Comptroller.deploy({maxPriorityFeePerGas: 1});
 
     const Unitroller = await ethers.getContractFactory("Unitroller");
-    const unitroller = await Unitroller.deploy();
+    const unitroller = await Unitroller.deploy({maxPriorityFeePerGas: 1});
 
+    await waitTx(comptroller.deployTransaction.hash)
+    await waitTx(unitroller.deployTransaction.hash)
     await comptroller.deployed();
     await unitroller.deployed();
 
@@ -29,56 +31,61 @@ async function main() {
     await writeAddr(unitroller.address, "Unitroller", network.name, account.address);
 
     //set Comptroller and Unitroller proxy
-    await (await unitroller._setPendingImplementation(comptroller.address)).wait();
-    await (await comptroller._become(unitroller.address)).wait();
+    await (await unitroller._setPendingImplementation(comptroller.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await comptroller._become(unitroller.address, {maxPriorityFeePerGas: 1})).wait();
 
     const AccessControlManager = await ethers.getContractFactory("AccessControlManager");
-    const accessControlManager = await AccessControlManager.deploy();
+    const accessControlManager = await AccessControlManager.deploy({maxPriorityFeePerGas: 1});
+    await waitTx(accessControlManager.deployTransaction.hash)
     await accessControlManager.deployed();
 
     console.log("\tAccessControlManager deployed to:", accessControlManager.address);
     await writeAddr(accessControlManager.address, "AccessControlManager", network.name, account.address);
 
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setCollateralFactor(address,uint256)", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setLiquidationIncentive(uint256)", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_supportMarket(address)", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketBorrowCaps(address[],uint256[])", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketSupplyCaps(address[],uint256[])", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setProtocolPaused(bool)", account.address)).wait();
-    await (await accessControlManager.giveCallPermission(unitroller.address, "_setActionsPaused(address[],uint256[],bool)", account.address)).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setCollateralFactor(address,uint256)", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setLiquidationIncentive(uint256)", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_supportMarket(address)", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketBorrowCaps(address[],uint256[])", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setMarketSupplyCaps(address[],uint256[])", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setProtocolPaused(bool)", account.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await accessControlManager.giveCallPermission(unitroller.address, "_setActionsPaused(address[],uint256[],bool)", account.address, {maxPriorityFeePerGas: 1})).wait();
 
     const proxyUnitroller = await ethers.getContractAt("Comptroller", unitroller.address, account)
 
     //comptroller set
-    await (await proxyUnitroller._setAccessControl(accessControlManager.address)).wait();
-    await (await proxyUnitroller._setLiquidationIncentive(liquidationIncentive)).wait();
-    await (await proxyUnitroller._setCloseFactor(closeFactor)).wait();
+    await (await proxyUnitroller._setAccessControl(accessControlManager.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await proxyUnitroller._setLiquidationIncentive(liquidationIncentive, {maxPriorityFeePerGas: 1})).wait();
+    await (await proxyUnitroller._setCloseFactor(closeFactor, {maxPriorityFeePerGas: 1})).wait();
 
     console.log("\tproxyUnitroller set success");
     //deploy NarwhalLens
     const NarwhalLens = await ethers.getContractFactory("NarwhalLens");
-    const narwhalLens = await NarwhalLens.deploy();
+    const narwhalLens = await NarwhalLens.deploy({maxPriorityFeePerGas: 1});
+    await waitTx(narwhalLens.deployTransaction.hash)
     await narwhalLens.deployed();
     console.log("\tNarwhalLens deployed to:", narwhalLens.address);
     await writeAddr(narwhalLens.address, "NarwhalLens", network.name, account.address);
 
     //deploy compoundLens
     const ComptrollerLens = await ethers.getContractFactory("ComptrollerLens");
-    const comptrollerLens = await ComptrollerLens.deploy();
+    const comptrollerLens = await ComptrollerLens.deploy({maxPriorityFeePerGas: 1});
+    await waitTx(comptrollerLens.deployTransaction.hash)
     await comptrollerLens.deployed();
     console.log("\tComptrollerLens deployed to:", comptrollerLens.address);
     await writeAddr(comptrollerLens.address, "ComptrollerLens", network.name, account.address);
 
     //set comptrollerLens
-    await (await proxyUnitroller._setComptrollerLens(comptrollerLens.address)).wait();
+    await (await proxyUnitroller._setComptrollerLens(comptrollerLens.address, {maxPriorityFeePerGas: 1})).wait();
 
     //deploy NAIComptroller and NAIUnitroller
     const NAIController = await ethers.getContractFactory("NAIController");
-    const naiController = await NAIController.deploy();
+    const naiController = await NAIController.deploy({maxPriorityFeePerGas: 1});
 
     const NAIUnitroller = await ethers.getContractFactory("NAIUnitroller");
-    const naiUnitroller = await NAIUnitroller.deploy();
+    const naiUnitroller = await NAIUnitroller.deploy({maxPriorityFeePerGas: 1});
 
+    await waitTx(naiController.deployTransaction.hash)
+    await waitTx(naiUnitroller.deployTransaction.hash)
     await naiController.deployed();
     await naiUnitroller.deployed();
 
@@ -88,17 +95,17 @@ async function main() {
     await writeAddr(naiUnitroller.address, "NAIUnitroller", network.name, account.address);
 
     //set NAIComptroller and NAIUnitroller proxy
-    await (await naiUnitroller._setPendingImplementation(naiController.address)).wait();
-    await (await naiController._become(naiUnitroller.address)).wait();
+    await (await naiUnitroller._setPendingImplementation(naiController.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await naiController._become(naiUnitroller.address, {maxPriorityFeePerGas: 1})).wait();
 
     const proxyNAIUnitroller = await ethers.getContractAt("NAIController", naiUnitroller.address, account)
 
-    await (await proxyNAIUnitroller._setComptroller(unitroller.address)).wait();
-    await (await proxyNAIUnitroller.initialize()).wait();
+    await (await proxyNAIUnitroller._setComptroller(unitroller.address, {maxPriorityFeePerGas: 1})).wait();
+    await (await proxyNAIUnitroller.initialize({maxPriorityFeePerGas: 1})).wait();
     //set NAIComptroller
-    await (await proxyUnitroller._setNAIController(naiUnitroller.address)).wait();
+    await (await proxyUnitroller._setNAIController(naiUnitroller.address, {maxPriorityFeePerGas: 1})).wait();
 
-    await (await proxyUnitroller._setNAIMintRate(NAIMintRate)).wait();
+    await (await proxyUnitroller._setNAIMintRate(NAIMintRate, {maxPriorityFeePerGas: 1})).wait();
 
 }
 
@@ -110,3 +117,23 @@ main()
         console.error(error);
         process.exit(1);
     });
+
+
+async function waitTx(txhash){
+    let a = true
+    while (a) {
+        const tx = await ethers.provider.getTransactionReceipt(txhash);
+        if (tx != null) {
+            a = false
+        }
+        await sleep(5000)
+    }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+module.exports = {
+    waitTx
+}

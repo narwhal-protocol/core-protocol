@@ -12,6 +12,14 @@ contract SimplePriceOracle is PriceOracle {
             return 300e18;
         } else if (compareStrings(nToken.symbol(), "NAI")) {
             return 1e18;
+        } else if (compareStrings(nToken.symbol(), "nNAI")) {
+            return 1e18;
+        } else if (compareStrings(nToken.symbol(), "nWBTC")) {
+            return 20000e18;
+        } else if (compareStrings(nToken.symbol(), "nWETH")) {
+            return 2000e18;
+        } else if (compareStrings(nToken.symbol(), "nFIL")) {
+            return 5e18;
         } else {
             return prices[address(NBep20(address(nToken)).underlying())];
         }

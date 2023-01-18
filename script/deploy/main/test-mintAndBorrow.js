@@ -6,7 +6,7 @@ const {getAddr} = require("../../../helpers/artifact_log.js");
 
 // 20 * 60 * 24 * 365 (BlockTime: 3s)
 let blocksPerYear = 10512000;
-const TokenName = "WBTC"
+const TokenName = "WETH"
 const nTokenName = "n" + TokenName
 
 
@@ -26,16 +26,16 @@ async function main() {
 
     const token = await ethers.getContractAt("MockToken", tokenAddr, account)
 
-    await (await token.approve(nTokenAddr, "10000000000000000000000000000")).wait()
+    await (await token.approve(nTokenAddr, "10000000000000000000000000000", {maxPriorityFeePerGas: 1})).wait()
 
     const nToken = await ethers.getContractAt("NBep20Delegator", nTokenAddr, account)
 
-    await (await nToken.mint(mintAmount)).wait()
+    await (await nToken.mint(mintAmount, {maxPriorityFeePerGas: 1})).wait()
 
 
     console.log("\tmint success");
 
-    await (await nToken.borrow(borrowAmount)).wait()
+    await (await nToken.borrow(borrowAmount, {maxPriorityFeePerGas: 1})).wait()
 
     console.log("\tborrow success");
 }

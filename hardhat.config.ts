@@ -85,6 +85,16 @@ const config: HardhatUserConfig = {
       gasMultiplier: 10,
       timeout: 12000000,
     },
+    hyperspace: {
+      chainId: 3141,
+      url: "https://api.hyperspace.node.glif.io/rpc/v0",
+      accounts: DEPLOYER_PRIVATE_KEY ? [`0x${DEPLOYER_PRIVATE_KEY}`] : [],
+    },
+    wallaby: {
+      chainId: 31415,
+      url: "https://wallaby.node.glif.io/rpc/v0",
+      accounts: DEPLOYER_PRIVATE_KEY ? [`0x${DEPLOYER_PRIVATE_KEY}`] : [],
+    },
     hardhat: (() => {
       if (process.env.BSC_ARCHIVE_NODE) {
         return {

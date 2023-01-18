@@ -1522,7 +1522,7 @@ contract Comptroller is ComptrollerV9Storage, ComptrollerInterfaceG2, Comptrolle
      * @return The address of NWL
      */
     function getNWLAddress() public view returns (address) {
-        return 0xa9D48D0b6F8e814418F6DD426E19Ea784893Dcf9;   // TODO: need to replace
+        return 0xEe49d7C3Bb1c7C73B1Dd6dbfCe684944aEBd9487;   // TODO: need to replace
     }
 
     /**

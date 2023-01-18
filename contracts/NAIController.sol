@@ -419,7 +419,7 @@ contract NAIController is NAIControllerStorageG2, NAIControllerErrorReporter, Ex
      * @return The address of NAI
      */
     function getNAIAddress() public view returns (address) {
-        return 0xE164c3Cd64e477094b77AcA4f73B2175FF47572e;   // TODO: need to replace
+        return 0xF2f098c0912133B21B3206c626A2b57820330aBC;   // TODO: need to replace
     }
 
     function initialize() onlyAdmin public {

@@ -1,13 +1,29 @@
 {
   "NAI": {
     "bsctest": {
-      "address": "0xE164c3Cd64e477094b77AcA4f73B2175FF47572e",
+      "address": "0x7d90957481646Cd2eb22b6Cb2cb743040fBBfe4E",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hardhat": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "wallaby": {
+      "address": "0xA3f1eC9d338b304a4c6ea1e0218364b35B83a1d4",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xF2f098c0912133B21B3206c626A2b57820330aBC",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NWL": {
     "bsctest": {
       "address": "0xa9D48D0b6F8e814418F6DD426E19Ea784893Dcf9",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xEe49d7C3Bb1c7C73B1Dd6dbfCe684944aEBd9487",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -29,6 +45,14 @@
     "hardhat": {
       "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "wallaby": {
+      "address": "0xd8CAd12545d33b366771D0B8b54858920B5cB91a",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x146a160d8aD839B8b07cd71feC0824356Ad851cE",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "Unitroller": {
@@ -39,6 +63,14 @@
     "hardhat": {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "wallaby": {
+      "address": "0x69dd2dCc04f70e09bC78Ff64461A69975825537f",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x442603BD2af92d2Db5c1572613BD75D3Afb8fca8",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "JumpRateModel": {
@@ -55,17 +87,29 @@
     "bsctest": {
       "address": "0x7477137D7B023ba11646D5F4f431102d96f737a2",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xD3010198Af7dbc9F851eC2a2f82E8CE69F92c48a",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nBNB": {
     "bsctest": {
       "address": "0x79212CfC5383429b9312716006a2F9B363242514",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x7f531f300fc14A5cB6493e4D0e6180281Fb9293f",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "SimplePriceOracle": {
     "bsctest": {
       "address": "0x0Ef66803e6466DcD73F69CDD6e940Fd0C7799AE9",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x08bc4196bCD778D546bE9425ef3447afd296f336",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -77,6 +121,10 @@
     "hardhat": {
       "address": "0x0B306BF915C4d645ff596e518fAf3F9669b97016",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "hyperspace": {
+      "address": "0x8647e11B3e8659e42e82cF810f1d708bD66f96E1",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "ComptrollerLens": {
@@ -87,6 +135,10 @@
     "hardhat": {
       "address": "0x959922bE3CAee4b8Cd9a407cc3ac1C251C2007B1",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "hyperspace": {
+      "address": "0xD2F6caF63C937F2a3682A8Ad2875944A96875762",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NAIController": {
@@ -97,6 +149,10 @@
     "hardhat": {
       "address": "0x68B1D87F95878fE05B998F19b66F4baba5De1aed",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "hyperspace": {
+      "address": "0xcf5B448BE795f216322158720543Dc167C3D69c3",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NAIUnitroller": {
@@ -107,6 +163,10 @@
     "hardhat": {
       "address": "0x3Aa5ebB10DC797CAC828524e59A333d0A371443c",
       "deployer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "hyperspace": {
+      "address": "0x0268ea44cF0ee0b27a82D6E88110d66BFf2051Fe",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NarwhalChainlinkOracle": {
@@ -119,17 +179,29 @@
     "bsctest": {
       "address": "0x9C69e0F1d37e1DFF28F64eDC0e8eAd67ad6C4507",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xd90da218e7235B2013c1a06c84023a1bc461F465",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "FILJumpRateModel": {
     "bsctest": {
       "address": "0x742D5a43a3CC47ADCcb9879E18D12F00191DE2B0",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x7Ae7c9b69B5a9080e45c0eaA61Fd942d8f696b7e",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nFIL": {
     "bsctest": {
       "address": "0x9C535E71979ceDDFA7974adCe93e3574F80F9635",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xA97cdF3D86440eF8f64518e335fbb7F02433a268",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -173,11 +245,19 @@
     "bsctest": {
       "address": "0xc019d424513203E7A1440869DD853808B3680930",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x5AECf0846D7FDa216665e4Af7C650B5D12728B1B",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "WBTCJumpRateModel": {
     "bsctest": {
       "address": "0x0909930338b1DFFd635308c57D81F9E3098859BF",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xa5f8303505c8597F280b37aE48435082e44Aa964",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -185,11 +265,19 @@
     "bsctest": {
       "address": "0xa7E48177021787Bf8F5C7B421Cd8Bcdcd2c31Cd2",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x1606Dd024Befe70e4c9C4A92E54a0d8d384bc237",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nWBTC": {
     "bsctest": {
       "address": "0x2b629BBB7dD8a3eac8516D596cCc1C2379feA0d5",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xcc64e88314F93FCec6206eb45c1fe3Db9C325788",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -197,11 +285,19 @@
     "bsctest": {
       "address": "0xFE1cE928EAEEB31E4efA4c44bDd4216dF0D4646E",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xcc4Ba2CF0F5949201de40F3a6Fd7eae910cc89A0",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "WETH": {
     "bsctest": {
       "address": "0x318C9a66291A884952Ec6Caf8905DfC2b25f8EF6",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0xFCaEFF9638D253De96B53A315673562a2cBD2036",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -209,17 +305,29 @@
     "bsctest": {
       "address": "0x253165b1a90B326E5F5F9FeaB07909F3FEc8Bb6b",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x6E012a2212077CaEFD67D8853F01Da776F7F05b8",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "NAIJumpRateModel": {
     "bsctest": {
       "address": "0x21d1275B759C7f0FDe10a66DDafcC0221e2D8b86",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x98f233bAf711C9a10DBaBc6aC4866A4C04Fd6C20",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
   "nNAI": {
     "bsctest": {
       "address": "0x3e2BB2c0c304540207E721f21d2A6c63bF38E81D",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x1e51Ee1E54645C9305882995170e3B341b87C83B",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   },
@@ -230,6 +338,14 @@
     },
     "bsctest": {
       "address": "0x834C35BAdd3D42d9bfd3ddE7b48b62FC10f9d426",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "wallaby": {
+      "address": "0x34b825eeB7ca8AC3aE81Ec356ba4602bfC2a310a",
+      "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
+    },
+    "hyperspace": {
+      "address": "0x5870AEa663b83C743be48ba02bF4479071768C78",
       "deployer": "0xE17281c17443b90A145d1a103d57189ffB2D912f"
     }
   }
