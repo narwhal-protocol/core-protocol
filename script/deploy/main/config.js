@@ -37,18 +37,18 @@ function getInitAllMarketsInfo() {
             jumpMultiplierPerYear: ethers.utils.parseUnits("3"),
             kink: ethers.utils.parseUnits("0.5")
         },
-        {
-            tokenName: "BNB",
-            supplyCap: ethers.utils.parseUnits("1000000000"),
-            collateralFactor: ethers.utils.parseUnits("0.8"),
-            reserveFactor:ethers.utils.parseUnits("0.2"),
-            initialExchangeRate:'200000000000000000000000000',
-            nwlBlockRate: ethers.utils.parseUnits("0.0001"),
-            baseRatePerYear: "0",
-            multiplierPerYear: ethers.utils.parseUnits("0.12"),
-            jumpMultiplierPerYear: ethers.utils.parseUnits("2"),
-            kink: ethers.utils.parseUnits("0.75")
-        },
+        // {
+        //     tokenName: "BNB",
+        //     supplyCap: ethers.utils.parseUnits("1000000000"),
+        //     collateralFactor: ethers.utils.parseUnits("0.8"),
+        //     reserveFactor:ethers.utils.parseUnits("0.2"),
+        //     initialExchangeRate:'200000000000000000000000000',
+        //     nwlBlockRate: ethers.utils.parseUnits("0.0001"),
+        //     baseRatePerYear: "0",
+        //     multiplierPerYear: ethers.utils.parseUnits("0.12"),
+        //     jumpMultiplierPerYear: ethers.utils.parseUnits("2"),
+        //     kink: ethers.utils.parseUnits("0.75")
+        // },
         {
             tokenName: "NAI",
             supplyCap: ethers.utils.parseUnits("1000000000"),
@@ -67,35 +67,28 @@ function getInitAllMarketsInfo() {
 function getAllClaimInfo() {
     return [{
         asset: "WBTC",
-        addr: '0xa7E48177021787Bf8F5C7B421Cd8Bcdcd2c31Cd2',
+        addr: '0x6B97F370B6f5E053287D47cE4283eA7976793c5E',
         frozenDuration: '86400',
         decimals:18,
         maxToClaimed: ethers.utils.parseUnits("0.1"),
     },
         {
             asset: "WETH",
-            addr: '0x318C9a66291A884952Ec6Caf8905DfC2b25f8EF6',
+            addr: '0xDa64243e1E8a0B3E0E0225EdF211307303A2c306',
             frozenDuration: '86400',
             decimals:18,
             maxToClaimed: ethers.utils.parseUnits("0.5"),
         },
         {
-            asset: "FIL",
-            addr: '0x9C69e0F1d37e1DFF28F64eDC0e8eAd67ad6C4507',
-            frozenDuration: '86400',
-            decimals:18,
-            maxToClaimed: ethers.utils.parseUnits("100"),
-        },
-        {
             asset: "NWL",
-            addr: '0xa9D48D0b6F8e814418F6DD426E19Ea784893Dcf9',
+            addr: '0xEe49d7C3Bb1c7C73B1Dd6dbfCe684944aEBd9487',
             frozenDuration: '86400',
             decimals:18,
             maxToClaimed: ethers.utils.parseUnits("200"),
         },
         {
             asset: "NAI",
-            addr: '0xE164c3Cd64e477094b77AcA4f73B2175FF47572e',
+            addr: '0xF2f098c0912133B21B3206c626A2b57820330aBC',
             frozenDuration: '86400',
             decimals:18,
             maxToClaimed: ethers.utils.parseUnits("200"),

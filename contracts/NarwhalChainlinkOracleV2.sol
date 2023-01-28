@@ -49,7 +49,7 @@ contract NarwhalChainlinkOracleV2 is PriceOracle {
         string memory symbol = nToken.symbol();
         address asset;
         uint decimals;
-        if (!compareStrings(symbol, "nBNB")) {
+        if (!compareStrings(symbol, "nFIL")) {
             BEP20Interface token = BEP20Interface(NBep20(address(nToken)).underlying());
             symbol = token.symbol();
             asset = address(token);

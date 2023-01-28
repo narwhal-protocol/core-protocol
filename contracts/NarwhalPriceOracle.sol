@@ -37,7 +37,7 @@ contract NarwhalPriceOracle is PriceOracle {
     }
 
     function getUnderlyingPrice(NToken nToken) public view returns (uint) {
-        if (compareStrings(nToken.symbol(), "nBNB")) {
+        if (compareStrings(nToken.symbol(), "nFIL")) {
             IStdReference.ReferenceData memory data = ref.getReferenceData("BNB", "USD");
             return data.rate;
         }else if (compareStrings(nToken.symbol(), "NWL")) {

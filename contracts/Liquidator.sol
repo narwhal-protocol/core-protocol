@@ -12,7 +12,7 @@ import "./Utils/SafeBEP20.sol";
 
 contract Liquidator is WithAdmin, ReentrancyGuard {
 
-    /// @notice Address of nBNB contract.
+    /// @notice Address of nFIL contract.
     NBNB public nBnb;
 
     /// @notice Address of Narwhal Unitroller contract.

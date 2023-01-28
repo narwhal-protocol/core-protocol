@@ -8,8 +8,8 @@ contract SimplePriceOracle is PriceOracle {
     event PricePosted(address asset, uint previousPriceMantissa, uint requestedPriceMantissa, uint newPriceMantissa);
 
     function getUnderlyingPrice(NToken nToken) public view returns (uint) {
-        if (compareStrings(nToken.symbol(), "nBNB")) {
-            return 300e18;
+        if (compareStrings(nToken.symbol(), "nFIL")) {
+            return 5e18;
         } else if (compareStrings(nToken.symbol(), "NAI")) {
             return 1e18;
         } else if (compareStrings(nToken.symbol(), "nNAI")) {
@@ -18,8 +18,6 @@ contract SimplePriceOracle is PriceOracle {
             return 20000e18;
         } else if (compareStrings(nToken.symbol(), "nWETH")) {
             return 2000e18;
-        } else if (compareStrings(nToken.symbol(), "nFIL")) {
-            return 5e18;
         } else {
             return prices[address(NBep20(address(nToken)).underlying())];
         }

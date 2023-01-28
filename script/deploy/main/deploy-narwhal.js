@@ -20,8 +20,6 @@ async function main() {
     const Unitroller = await ethers.getContractFactory("Unitroller");
     const unitroller = await Unitroller.deploy({maxPriorityFeePerGas: 1});
 
-    await waitTx(comptroller.deployTransaction.hash)
-    await waitTx(unitroller.deployTransaction.hash)
     await comptroller.deployed();
     await unitroller.deployed();
 
@@ -36,7 +34,6 @@ async function main() {
 
     const AccessControlManager = await ethers.getContractFactory("AccessControlManager");
     const accessControlManager = await AccessControlManager.deploy({maxPriorityFeePerGas: 1});
-    await waitTx(accessControlManager.deployTransaction.hash)
     await accessControlManager.deployed();
 
     console.log("\tAccessControlManager deployed to:", accessControlManager.address);
@@ -61,7 +58,6 @@ async function main() {
     //deploy NarwhalLens
     const NarwhalLens = await ethers.getContractFactory("NarwhalLens");
     const narwhalLens = await NarwhalLens.deploy({maxPriorityFeePerGas: 1});
-    await waitTx(narwhalLens.deployTransaction.hash)
     await narwhalLens.deployed();
     console.log("\tNarwhalLens deployed to:", narwhalLens.address);
     await writeAddr(narwhalLens.address, "NarwhalLens", network.name, account.address);
@@ -69,7 +65,6 @@ async function main() {
     //deploy compoundLens
     const ComptrollerLens = await ethers.getContractFactory("ComptrollerLens");
     const comptrollerLens = await ComptrollerLens.deploy({maxPriorityFeePerGas: 1});
-    await waitTx(comptrollerLens.deployTransaction.hash)
     await comptrollerLens.deployed();
     console.log("\tComptrollerLens deployed to:", comptrollerLens.address);
     await writeAddr(comptrollerLens.address, "ComptrollerLens", network.name, account.address);
@@ -84,8 +79,6 @@ async function main() {
     const NAIUnitroller = await ethers.getContractFactory("NAIUnitroller");
     const naiUnitroller = await NAIUnitroller.deploy({maxPriorityFeePerGas: 1});
 
-    await waitTx(naiController.deployTransaction.hash)
-    await waitTx(naiUnitroller.deployTransaction.hash)
     await naiController.deployed();
     await naiUnitroller.deployed();
 
@@ -118,22 +111,3 @@ main()
         process.exit(1);
     });
 
-
-async function waitTx(txhash){
-    let a = true
-    while (a) {
-        const tx = await ethers.provider.getTransactionReceipt(txhash);
-        if (tx != null) {
-            a = false
-        }
-        await sleep(5000)
-    }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-module.exports = {
-    waitTx
-}

@@ -35,7 +35,7 @@ contract NarwhalChainlinkOracle is PriceOracle {
 
     function getUnderlyingPrice(NToken nToken) public view returns (uint) {
         string memory symbol = nToken.symbol();
-        if (compareStrings(symbol, "nBNB")) {
+        if (compareStrings(symbol, "nFIL")) {
             return getChainlinkPrice(getFeed(symbol));
         } else if (compareStrings(symbol, "NAI") || compareStrings(symbol, "nNAI")) {
             return NAI_VALUE;

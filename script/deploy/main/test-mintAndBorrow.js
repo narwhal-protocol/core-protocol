@@ -6,13 +6,13 @@ const {getAddr} = require("../../../helpers/artifact_log.js");
 
 // 20 * 60 * 24 * 365 (BlockTime: 3s)
 let blocksPerYear = 10512000;
-const TokenName = "WETH"
+const TokenName = "NAI"
 const nTokenName = "n" + TokenName
 
 
-const mintAmount = "1000000000000000000";
+const mintAmount = "10000000000000000000000";
 
-const borrowAmount = "200000000000000000"
+const borrowAmount = "2000000000000000000000"
 
 
 

@@ -23,7 +23,14 @@
     "bsctest:deploy-naiVault": "npx hardhat run script/deploy/main/deploy-NAIVault.js --network bsctest",
     "bsctest:deploy-nwlVault": "npx hardhat run script/deploy/main/deploy-NWLVault.js --network bsctest",
     "bsctest:deploy-treasury": "npx hardhat run script/deploy/main/deploy-treasury.js --network bsctest",
-    "bsctest:deployment": "npm run bsctest:deploy-narwhal && npm run bsctest:deploy-chainLinkOracle && npm run bsctest:init-market && npm run bsctest:deploy-naiVault && npm run  bsctest:deploy-nwlVault && npm run  bsctest:deploy-treasury"
+    "bsctest:deployment": "npm run bsctest:deploy-narwhal && npm run bsctest:deploy-chainLinkOracle && npm run bsctest:init-market && npm run bsctest:deploy-naiVault && npm run  bsctest:deploy-nwlVault && npm run  bsctest:deploy-treasury",
+    "hyperspace:deploy-narwhal": "npx hardhat run script/deploy/main/deploy-narwhal.js --network hyperspace",
+    "hyperspace:deploy-chainLinkOracle": "npx hardhat run script/deploy/main/deploy-testoracle.js --network hyperspace",
+    "hyperspace:init-market": "npx hardhat run script/deploy/main/init_Markets.js --network hyperspace",
+    "hyperspace:deploy-naiVault": "npx hardhat run script/deploy/main/deploy-NAIVault.js --network hyperspace",
+    "hyperspace:deploy-nwlVault": "npx hardhat run script/deploy/main/deploy-NWLVault.js --network hyperspace",
+    "hyperspace:deploy-treasury": "npx hardhat run script/deploy/main/deploy-treasury.js --network hyperspace",
+    "hyperspace:deployment": "npm run hyperspace:deploy-narwhal && npm run hyperspace:deploy-chainLinkOracle && npm run hyperspace:init-market && npm run hyperspace:deploy-naiVault && npm run  hyperspace:deploy-nwlVault && npm run  hyperspace:deploy-treasury"
   },
   "repository": "git@github.com:NarwhalProtocol/narwhal-protocol.git",
   "author": "Narwhal",

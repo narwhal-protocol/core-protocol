@@ -45,7 +45,7 @@ contract PriceOracleProxy is PriceOracle {
     /**
      * @param guardian_ The address of the guardian, which may set the SAI price once
      * @param v1PriceOracle_ The address of the v1 price oracle, which will continue to operate and hold prices for collateral assets
-     * @param nBnbAddress_ The address of nBNB, which will return a constant 1e18, since all prices relative to bnb
+     * @param nBnbAddress_ The address of nFIL, which will return a constant 1e18, since all prices relative to bnb
      * @param vUsdcAddress_ The address of vUSDC, which will be read from a special oracle key
      * @param vSaiAddress_ The address of vSAI, which may be read directly from storage
      * @param vDaiAddress_ The address of vDAI, which will be read from a special oracle key

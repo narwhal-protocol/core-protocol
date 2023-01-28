@@ -14,20 +14,18 @@ async function main() {
 
         const JumpRateModel = await ethers.getContractFactory("JumpRateModel");
         const jumpRateModel = await JumpRateModel.deploy(markets[i].baseRatePerYear, markets[i].multiplierPerYear, markets[i].jumpMultiplierPerYear, markets[i].kink, {maxPriorityFeePerGas: 1});
-        await waitTx(jumpRateModel.deployTransaction.hash)
         await jumpRateModel.deployed();
         console.log("\tJumpRateModel deployed to:", jumpRateModel.address);
         await writeAddr(jumpRateModel.address, TokenName + "JumpRateModel", network.name, account.address);
         const proxyUnitroller = await ethers.getContractAt("Comptroller", UnitrollerAddr, account)
 
-        if (NTokenName === "nBNB") {
+        if (NTokenName === "nFIL") {
             const NBNB = await ethers.getContractFactory("NBNB");
-            const nBNB = await NBNB.deploy(UnitrollerAddr, jumpRateModel.address, markets[i].initialExchangeRate, "Narwhal BNB", "nBNB", 8, account.address, {maxPriorityFeePerGas: 1});
-            await waitTx(nBNB.deployTransaction.hash)
+            const nBNB = await NBNB.deploy(UnitrollerAddr, jumpRateModel.address, markets[i].initialExchangeRate, "Narwhal FIL", "nFIL", 8, account.address, {maxPriorityFeePerGas: 1});
             await nBNB.deployed();
 
-            console.log("\tnBNB deployed to:", nBNB.address);
-            await writeAddr(nBNB.address, "nBNB", network.name, account.address);
+            console.log("\tnFIL deployed to:", nBNB.address);
+            await writeAddr(nBNB.address, "nFIL", network.name, account.address);
 
             await (await proxyUnitroller._supportMarket(nBNB.address, {maxPriorityFeePerGas: 1})).wait();
             await (await proxyUnitroller._setMarketSupplyCaps([nBNB.address], [markets[i].supplyCap], {maxPriorityFeePerGas: 1})).wait();
@@ -47,7 +45,6 @@ async function main() {
             const Token = await ethers.getContractFactory("MockToken");
             const token = await Token.deploy(account.address, TokenName, TokenName, {maxPriorityFeePerGas: 1});
 
-            await waitTx(token.deployTransaction.hash)
             await token.deployed();
             await writeAddr(token.address, TokenName, network.name, account.address);
             console.log("\t" + TokenName +" deployed to:", token.address);
@@ -59,7 +56,6 @@ async function main() {
         if (NBep20DelegateAddr === "") {
             const NBep20Delegate = await ethers.getContractFactory("NBep20Delegate");
             const nBep20Delegate = await NBep20Delegate.deploy({maxPriorityFeePerGas: 1});
-            await waitTx(nBep20Delegate.deployTransaction.hash)
             await nBep20Delegate.deployed();
 
             await writeAddr(nBep20Delegate.address, "NBep20Delegate", network.name, account.address);
@@ -71,7 +67,6 @@ async function main() {
         //console.log(NBep20DelegateAddr, UnitrollerAddr, JumpRateModelAddr)
         const NBep20Delegator = await ethers.getContractFactory("NBep20Delegator");
         const nToken = await NBep20Delegator.deploy(tokenAddr, UnitrollerAddr, jumpRateModel.address, markets[i].initialExchangeRate, "Narwhal " + TokenName, NTokenName, 8, account.address, NBep20DelegateAddr, "0x", {maxPriorityFeePerGas: 1});
-        await waitTx(nToken.deployTransaction.hash)
         await nToken.deployed();
 
         console.log("\t" + NTokenName +"deployed to:", nToken.address);
@@ -92,20 +87,6 @@ async function main() {
 
 }
 
-async function waitTx(txhash){
-    let a = true
-    while (a) {
-        const tx = await ethers.provider.getTransactionReceipt(txhash);
-        if (tx != null) {
-            a = false
-        }
-        await sleep(5000)
-    }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 // We recommend this pattern to be able to use async/await everywhere
 // and properly handle errors.

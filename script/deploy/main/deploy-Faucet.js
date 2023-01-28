@@ -6,7 +6,7 @@ async function main() {
     const [account] = await ethers.getSigners();
     //deploy Faucet
     const Faucet = await ethers.getContractFactory("Faucet");
-    const faucet = await Faucet.deploy();
+    const faucet = await Faucet.deploy({maxPriorityFeePerGas: 1});
 
     await faucet.deployed();
 
@@ -16,11 +16,11 @@ async function main() {
 
     const assets = getAllClaimInfo()
 
-    await (await faucet.addAssets(assets)).wait()
+    await (await faucet.addAssets(assets, {maxPriorityFeePerGas: 1})).wait()
 
     for (let i = 0; i < assets.length; i++) {
         const token = await ethers.getContractAt("MockToken", assets[i].addr, account)
-        await (await token.transfer(faucet.address, ethers.utils.parseUnits("100000"))).wait();
+        await (await token.transfer(faucet.address, ethers.utils.parseUnits("100000"), {maxPriorityFeePerGas: 1})).wait();
     }
 }
 

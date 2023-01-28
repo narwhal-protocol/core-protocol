@@ -112,7 +112,7 @@ contract SnapshotLens is ExponentialNoError {
         address underlyingAssetAddress;
         uint underlyingDecimals;
 
-        if (compareStrings(nToken.symbol(), "nBNB")) {
+        if (compareStrings(nToken.symbol(), "nFIL")) {
             underlyingAssetAddress = address(0);
             underlyingDecimals = 18;
         } else {
